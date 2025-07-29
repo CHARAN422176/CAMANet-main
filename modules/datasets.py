@@ -18,7 +18,8 @@ class BaseDataset(Dataset):
         self.split = split
         self.tokenizer = tokenizer
         self.transform = transform
-        self.image_dir = os.path.join(args.data_dir, args.dataset_name,  'images')
+        # self.image_dir = os.path.join(args.data_dir, args.dataset_name,  'images')
+        self.image_dir = '/kaggle/input/iu-xray/iu_xray/images'
         # self.ann_path = os.path.join(args.data_dir, args.dataset_name, 'annotation.json')
         self.ann_path = '/kaggle/input/iu-xray/iu_xray/annotation.json'
         self.ann = json.loads(open(self.ann_path, 'r').read())
