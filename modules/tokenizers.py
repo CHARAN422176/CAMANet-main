@@ -6,7 +6,8 @@ import os
 
 class Tokenizer(object):
     def __init__(self, args):
-        self.ann_path = os.path.join(args.data_dir, args.dataset_name, 'annotation.json')
+        # self.ann_path = os.path.join(args.data_dir, args.dataset_name, 'annotation.json')
+        self.ann_path = '/kaggle/input/iu-xray/iu_xray/annotation.json'
         self.threshold = args.threshold
         self.dataset_name = args.dataset_name
         if self.dataset_name == 'iu_xray':
