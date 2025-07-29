@@ -19,7 +19,8 @@ class BaseDataset(Dataset):
         self.tokenizer = tokenizer
         self.transform = transform
         self.image_dir = os.path.join(args.data_dir, args.dataset_name,  'images')
-        self.ann_path = os.path.join(args.data_dir, args.dataset_name, 'annotation.json')
+        # self.ann_path = os.path.join(args.data_dir, args.dataset_name, 'annotation.json')
+        self.ann_path = '/kaggle/input/iu-xray/iu_xray/annotation.json'
         self.ann = json.loads(open(self.ann_path, 'r').read())
         self.labels_path = os.path.join(args.data_dir, args.dataset_name, args.label_path)
         self.labels = json.loads(open(self.labels_path, 'r').read())
