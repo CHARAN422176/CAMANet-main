@@ -426,7 +426,7 @@ class Trainer(BaseTrainer):
                 self.writer.add_scalar('data/test_bleu2', test_met['BLEU_2'], epoch)
                 self.writer.add_scalar('data/test_bleu3', test_met['BLEU_3'], epoch)
                 self.writer.add_scalar('data/test_bleu4', test_met['BLEU_4'], epoch)
-                self.writer.add_scalar('data/test_meteor', test_met['METEOR'], epoch)
+                # self.writer.add_scalar('data/test_meteor', test_met['METEOR'], epoch)
                 self.writer.add_scalar('data/test_rouge-l', test_met['ROUGE_L'], epoch)
 
         for key, value in log.items():
